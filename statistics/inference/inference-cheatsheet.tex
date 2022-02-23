@@ -16,7 +16,7 @@
 
 %\addbibresource{}
 %\graphicspath{ {} }
-%\setlist{noitemsep}
+\setlist{noitemsep}
 %\NumTabs{3}
 
 \newcommand{\R}{\mathbb{R}}		% Real Number                                                           
@@ -33,54 +33,23 @@
 \newcommand{\convl}{\xrightarrow{L}}    % Converge in law
 
 \theoremstyle{definition}
-\newtheorem{thm}{Theorem}
-\newtheorem{corollary}{Corollary}
-\newtheorem{definition}{Definition}
+\newtheorem{thm}{Thm}[section]
+\newtheorem{corollary}{Cor}[corollary]
+\newtheorem{definition}{Def}[section]
+\newtheorem{lemma}{Lemma}[section]
 %\titleformat{\section}[runin]{\large\bfseries}{}{0pt}{#1\ \thesection}
 
 \setlength\parindent{0pt}
 
-\title{Inference Cheatsheet}
+\title{\vspace{-0.8in}Inference Cheatsheet}
 \author{James Lee}
 \date{}
 
 \begin{document}
     \maketitle
 
-    \section{Convergence in Probability}%
-    \label{sec:convergence_in_probability}
-    
-    \begin{definition}[Convergence in Probability]
-        $Y_n \convp c$ if for every $\epsilon>0$ and $\delta > 0,\ 
-        \exists\ n_0(\epsilon, \delta)$ such that 
-        $\forall n > n_0(\epsilon, \delta)\ 
-        P(|Y_n - c| > \epsilon) < \delta$.
-    \end{definition}
+    \input{01-convergence-in-prob}
 
-    \begin{thm}[Chebyshev Inequality]
-    For random variable, $Y$, $a>0$, and $c$,
-        \begin{equation}
-            P(|Y-c| \ge a) \le \frac{\E (Y-c)^2}{a^2}
-        \end{equation}    
-    \end{thm}
-
-    \begin{definition}[Markov Inequality]
-        If $X$ is a non-negative random variable and $a>0$ then
-        \begin{equation}
-            P( X \ge a) \le \frac{\E X}{a}
-        \end{equation}
-    \end{definition}
-
-    \begin{thm}
-        If $\E (Y-c)^2 \to 0$, then $Y_n \convp c$.
-    \end{thm}
-
-    \begin{thm}
-        If $X_1, \ldots, X_n$ iid, $\E X_i = \mu$, $\Var X_i = \sigma^2 < \infty$, then
-        \begin{equation}
-            \bar{X} \convp \mu
-        \end{equation}
-    \end{thm}
-    
+    \input{02-convergence-in-law}
 
 \end{document}

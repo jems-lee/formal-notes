@@ -1,0 +1,64 @@
+\section{Convergence in Probability}%
+\label{sec:convergence_in_probability}
+
+\begin{definition}[Convergence in Probability]
+    $Y_n \convp c$ if for every $\epsilon>0$ and $\delta > 0,\ 
+    \exists\ n_0(\epsilon, \delta)$ such that 
+    \begin{equation*}
+        P(|Y_n - c| > \epsilon) < \delta,\ 
+        \forall n > n_0(\epsilon, \delta)
+    \end{equation*}
+\end{definition}
+
+\begin{thm}[Chebyshev Inequality]
+For random variable, $Y$, $a>0$, and $c$,
+    \begin{equation*}
+        P(|Y-c| \ge a) \le \frac{\E (Y-c)^2}{a^2}
+    \end{equation*}    
+\end{thm}
+
+\begin{definition}[Markov Inequality]
+    If $X$ is a non-negative random variable and $a>0$ then
+    \begin{equation*}
+        P( X \ge a) \le \frac{\E X}{a}
+    \end{equation*}
+\end{definition}
+
+\begin{thm}
+    If $\E (Y-c)^2 \to 0$, then $Y_n \convp c$.
+\end{thm}
+
+\begin{thm}
+    If $X_1, \ldots, X_n$ iid, $\E X_i = \mu$, $\Var X_i = \sigma^2 < \infty$, then
+    \begin{equation*}
+        \bar{X} \convp \mu
+    \end{equation*}
+\end{thm}
+
+\begin{thm}
+    If $A_n \convp a$ and $B_n \convp b$, then
+    \begin{enumerate}
+        \item $A_n \pm B_n \convp a \pm b$,
+        \item $A_n \cdot B_n \convp a \cdot b$.
+    \end{enumerate}
+\end{thm}
+
+\begin{thm}
+    If $Y_n \convp c$ and $f$ is continuous at $c$, then $f(Y_n) \convp f(c)$.
+\end{thm}
+
+\begin{definition}
+    A sequence of estimators $\delta_n$ of $g(\theta)$ is \it{consistent} if
+    \begin{equation*}
+        \delta_n \convp g(\theta)
+    \end{equation*}
+\end{definition}
+
+\begin{thm}
+    If bias and variance of $\delta_n \to 0$ as $n \to \infty$, $\delta_n$ 
+    is consistent.
+\end{thm}
+
+\begin{definition}
+    $A_n = o_p (B_n)$ if $ \frac{A_n}{B_n} \convp 0$.
+\end{definition}
