@@ -9,7 +9,7 @@
     \end{equation*}
 \end{definition}
 
-\begin{definition}{Convergence in Law/Distribution}
+\begin{definition}[Convergence in Law/Distribution]
     $Y_n \convl Y$ if $H_n(x) \to H(x)$ for all continuity points $x$.
 \end{definition}
 
@@ -17,7 +17,7 @@
     If $Y_n \convl H$ then $Y_n$ is bounded in probability.
 \end{thm}
 
-\begin{thm}{Slutsky's Theorem}
+\begin{thm}[Slutsky's Theorem]
     If $Y_n \convl Y$, $A_n \convp a$, and $B_n \convp b$, then
     \begin{equation*}
         A_n + B_n Y_n \convl a + b Y.
@@ -26,10 +26,9 @@
 
 \begin{corollary}
     If $Y_n \convl Y$, $R_n \convp 0$, and $B_n \convp 1$, then
-    \begin{align*}
-        Y_n + R_n &\convl Y \\
-        Y_n / B_n &\convl Y.
-    \end{align*}
+    \begin{equation*}
+        Y_n + R_n \convl Y \text{ and } Y_n / B_n \convl Y.
+    \end{equation*}
 \end{corollary}
 
 \begin{thm}
