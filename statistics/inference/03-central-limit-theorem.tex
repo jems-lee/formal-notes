@@ -1,0 +1,30 @@
+\section{Central Limit Theorem}%
+\label{sec:central_limit_theorem}
+
+\begin{thm}
+    If $X_1 \ldots X_n$ iid, $\E X_i = \xi$, $\Var X_i = \sigma^2 < \infty$, then
+    \begin{equation*}
+        \sqrt{n} (\bar{X} - \xi) \convl N(0, \sigma^2).
+    \end{equation*}
+\end{thm}
+
+\begin{thm}[Berry-Esseen]
+    If $X_1 \ldots X_n$ iid $\sim F$ with finite 3rd moment, then $\exists C$
+    that is independent of $F$ such that for all $x$,
+    \begin{equation*}
+        |G_n(x) - \Phi| \le \frac{C}{\sqrt{n}} \frac{\E |X_i - \xi|^3}{\sigma^3}
+    \end{equation*}
+    where $G_n(x)$ is the CDF of $\sqrt{n} (\bar{X} - \xi) / \sigma$.
+\end{thm}
+
+\begin{corollary}
+    Under the assumptions of Berry-Esseen's theorem,
+    \begin{equation*}
+        G_n(x) \to \Phi(x) \text{ as } n \to \infty
+    \end{equation*}
+    for any sequence $F_n$ with mean $\xi_n$ and $\sigma_n^2$ for which
+    \begin{equation*}
+        \frac{E_n |X_1 - \xi_n|^3}{\sigma_n^3} = o(\sqrt{n})
+    \end{equation*}
+    and in particular if it is bounded.
+\end{corollary}

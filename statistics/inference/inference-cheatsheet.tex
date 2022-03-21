@@ -1,4 +1,4 @@
-\documentclass[11pt, twocolumn]{article}
+\documentclass[11pt]{article}
 
 \usepackage[margin=0.5in]{geometry}
 \usepackage{amsmath, amsthm, amssymb, amsfonts}
@@ -34,7 +34,7 @@
 
 \theoremstyle{definition}
 \newtheorem{thm}{Thm}[section]
-\newtheorem{corollary}{Cor}[corollary]
+\newtheorem{corollary}{Cor}[section]
 \newtheorem{definition}{Def}[section]
 \newtheorem{lemma}{Lemma}[section]
 %\titleformat{\section}[runin]{\large\bfseries}{}{0pt}{#1\ \thesection}
@@ -48,8 +48,20 @@
 \begin{document}
     \maketitle
 
-    \input{01-convergence-in-prob}
+    \begin{multicols}{2}
 
-    \input{02-convergence-in-law}
+        \input{01-convergence-in-prob}
+
+        \input{02-convergence-in-law}
+
+        \input{03-central-limit-theorem}
+
+        \input{04-delta-method}
+
+        \input{misc}
+
+    \end{multicols}
+
+
 
 \end{document}

@@ -5,10 +5,41 @@
     $Y_n$ is \textit{bounded in probability} if for any $\epsilon>0\ \exists K$
     and $n_0(\epsilon)$ such that
     \begin{equation*}
-        P(|Y_n| > K) < \epsilon \text{ for all } n > n_0(\epsilon)
+        P(|Y_n| > K) < \epsilon \text{ for all } n > n_0(\epsilon).
     \end{equation*}
 \end{definition}
 
 \begin{definition}{Convergence in Law/Distribution}
     $Y_n \convl Y$ if $H_n(x) \to H(x)$ for all continuity points $x$.
 \end{definition}
+
+\begin{thm}
+    If $Y_n \convl H$ then $Y_n$ is bounded in probability.
+\end{thm}
+
+\begin{thm}{Slutsky's Theorem}
+    If $Y_n \convl Y$, $A_n \convp a$, and $B_n \convp b$, then
+    \begin{equation*}
+        A_n + B_n Y_n \convl a + b Y.
+    \end{equation*}
+\end{thm}
+
+\begin{corollary}
+    If $Y_n \convl Y$, $R_n \convp 0$, and $B_n \convp 1$, then
+    \begin{align*}
+        Y_n + R_n &\convl Y \\
+        Y_n / B_n &\convl Y.
+    \end{align*}
+\end{corollary}
+
+\begin{thm}
+    If $k_n (Y_n - c) \convl H$ and $k_n \to \infty$ then $Y_n \convp c$.
+\end{thm}
+
+\begin{definition}
+    $Y_n \convp Y$ if $Y_n - Y \convp 0$.
+\end{definition}
+
+\begin{thm}
+    $Y_n \convp Y \implies Y_n \convl Y$ 
+\end{thm}
