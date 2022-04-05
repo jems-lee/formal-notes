@@ -1,0 +1,64 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{lmodern}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{bm}
+%\usepackage{biblatex}
+%\usepackage{tabto}
+%\usepackage[compact, explicit]{titlesec}
+
+%\addbibresource{}
+%\graphicspath{ {} }
+\setlist{noitemsep}
+%\NumTabs{3}
+
+\newcommand{\R}{\mathbb{R}}		% Real Number                                                           
+\newcommand{\Z}{\mathbb{Z}} 	% Integers                                                              
+\newcommand{\N}{\mathbb{N}} 	% Natural Numbers                                                       
+\newcommand{\Q}{\mathbb{Q}} 	% Rational Number                                                       
+\newcommand{\E}{\mathbf{E}} 	% Expectation                                                           
+\newcommand{\Var}{\mathbf{Var}}	% Variance
+\newcommand{\J}{\mathcal{J}}	% Semialgebra                                                          
+\newcommand{\F}{\mathcal{F}} 	% Algebra                                                              
+\newcommand{\B}{\mathcal{B}} 	% Borel Sets                                                           
+\newcommand{\prb}{\mathbf{P}}	% Probability
+\newcommand{\convp}{\xrightarrow{p}}    % Converge in probability
+\newcommand{\convl}{\xrightarrow{L}}    % Converge in law
+
+\theoremstyle{definition}
+\newtheorem{thm}{Thm}[section]
+\newtheorem{corollary}{Cor}[section]
+\newtheorem{definition}{Def}[section]
+\newtheorem{lemma}{Lemma}[section]
+%\titleformat{\section}[runin]{\large\bfseries}{}{0pt}{#1\ \thesection}
+
+\setlength\parindent{0pt}
+
+\title{\vspace{-0.8in}Inference Cheatsheet}
+\author{James Lee}
+\date{}
+
+\begin{document}
+    \maketitle
+
+
+    \input{../src/01-convergence-in-prob}
+
+    \input{../src/02-convergence-in-law}
+
+    \input{../src/03-central-limit-theorem}
+
+    \input{../src/04-delta-method}
+
+    \input{../src/misc}
+
+
+
+\end{document}
